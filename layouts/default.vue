@@ -32,6 +32,10 @@ const routeName = computed(() => $router.currentRoute.value.name)
         // -webkit-font-smoothing: antialiased;
     }
 
+    body {
+        margin: 0;
+    }
+
     .layout {
         display: flex;
         flex-direction: column;
