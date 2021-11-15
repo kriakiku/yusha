@@ -1,0 +1,29 @@
+<template>
+  <article>
+    <Head>
+        <Title>Yusha Otter — Твой стилист 😼</Title>
+    </Head>
+
+    <h1>Скоро тут будет очень много всякого разного</h1>
+
+    <UiLottie 
+        :content="sticker" 
+        :width="192" 
+        :height="192" 
+        loop 
+        style="margin: 30px auto 60px;"
+    />
+
+    <NuxtLink to="/thanks" style="text-decoration: none;">
+        <it-button type="black" block>Перейти на страницу<br /> «Спасибо за визит!»</it-button>
+    </NuxtLink>
+
+    <br /><br />
+
+    <ContentRecomendations title />
+  </article>
+</template>
+
+<script setup>
+import sticker from '~/assets/stickers/otter-love.json'
+</script>
