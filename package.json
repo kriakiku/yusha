@@ -6,11 +6,14 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "latest",
+    "nuxt3": "^3.0.0-27288761.d3fb512",
     "sass": "^1.43.4"
   },
   "dependencies": {
     "equal-vue": "^0.79.3",
-    "lottie-web": "^5.8.1"
+    "html-entities": "^2.3.2",
+    "lottie-web": "^5.8.1",
+    "lvovich": "^1.0.16",
+    "string-to-color": "^2.2.2"
   }
 }

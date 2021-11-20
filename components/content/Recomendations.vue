@@ -63,8 +63,7 @@
         display: block;
 
         &__title {
-            font-size: 1.1rem;
-            font-weight: normal;
+            margin-bottom: 6px;
         }
 
         &__content {

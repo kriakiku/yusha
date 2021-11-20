@@ -29,6 +29,15 @@
             padding: 12px 10px;
             font-size: 1.1rem;
             z-index: 2;
+
+    
+            background-image: linear-gradient(to right, rgb(0, 198, 255) 0%, rgb(0, 114, 255) 50%);
+            background-size: 140% auto;
+            transition: .5s;
+
+            &:hover {
+                background-position: 40%;
+            }
         }
 
         &__description {

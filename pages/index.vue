@@ -21,6 +21,7 @@
     <br /><br />
 
     <ContentRecomendations title />
+    <ContentRandomReview />
   </article>
 </template>
 
