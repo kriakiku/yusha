@@ -40,8 +40,8 @@
         id="7973290"
         v-model:selected="selected"
       >
-        <template #title>Тонирование</template>
-        <template #price>1 000 ₽<sup>2</sup></template>
+        <template #title>Тонирование<sup>2</sup></template>
+        <template #price>1 000 ₽</template>
         <template #duration>~1:30 часа</template>
       </ContentBookItem>
     </div>
