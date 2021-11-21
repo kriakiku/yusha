@@ -15,7 +15,7 @@
     })
 </script>
 
-<style lang="scss" setup>
+<style lang="less">
     .recomendations-item {
         display: inline-block;
         min-width: 250px;

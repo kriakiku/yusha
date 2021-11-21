@@ -19,7 +19,7 @@
     })
 </script>
 
-<style lang="scss">
+<style lang="less">
     .content-short {
         position: relative;
         padding-top: 42px;

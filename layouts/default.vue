@@ -29,7 +29,7 @@ const { $router } = useNuxtApp();
 const routeName = computed(() => $router.currentRoute.value.name);
 </script>
 
-<style lang="scss">
+<style lang="less">
 :root {
   --content-padding: 24px;
 

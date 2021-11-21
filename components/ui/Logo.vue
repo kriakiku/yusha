@@ -8,7 +8,7 @@
     </NuxtLink>
 </template>
 
-<style lang="scss">
+<style lang="less">
     .logo {
         display: flex;
         text-decoration: none;

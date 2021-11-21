@@ -18,7 +18,7 @@ const { vertical } = defineProps({
 });
 </script>
 
-<style lang="scss">
+<style lang="less">
 .divider {
   box-sizing: border-box;
   margin: 0;

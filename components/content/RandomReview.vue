@@ -54,7 +54,7 @@ const review = computed(() =>
 );
 </script>
 
-<style lang="scss">
+<style lang="less">
 .random-review {
   display: block;
   margin-bottom: 28px;

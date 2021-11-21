@@ -65,7 +65,7 @@ const content = ref(null);
 useDragScroll(content);
 </script>
 
-<style lang="scss">
+<style lang="less">
 .recomendations {
   display: block;
 

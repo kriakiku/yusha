@@ -47,7 +47,7 @@ useMeta({
 });
 </script>
 
-<style lang="scss">
+<style lang="less">
 .article {
   display: block;
 

@@ -16,7 +16,7 @@
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="less">
 .tip-info {
   position: sticky;
   z-index: 10;
