@@ -19,7 +19,7 @@
 
     <!-- <br /><br /> -->
 
-    <!-- <ContentRecomendations with-title /> -->
+    <ContentRecomendations with-title />
     <ContentRandomReview />
   </article>
 </template>

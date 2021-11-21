@@ -46,9 +46,9 @@
 
 <script setup>
 const { data: reviews } = await useFetch("/api/reviews");
-const review = useState('randomReview', () => 
+const review = useState("randomReview", () =>
   reviews.value ? [...reviews.value].sort(() => Math.random() - 0.5)[0] : []
-)
+);
 </script>
 
 <style lang="less">
@@ -121,6 +121,13 @@ const review = useState('randomReview', () =>
     font-size: 0.94rem;
     white-space: pre-wrap;
     hyphens: auto;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    line-clamp: 12;
+    -webkit-box-orient: vertical;
   }
 }
 </style>

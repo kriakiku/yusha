@@ -1,6 +1,6 @@
 <template>
   <div class="book-item">
-    <div class="book-item__inner">
+    <div class="book-item__inner" @click="toggle">
       <div class="book-item__icon" :style="{ '--color': icon.color }">
         <img :src="icon.src" :alt="icon.alt" width="44" height="44" />
       </div>
@@ -9,22 +9,47 @@
         <strong class="book-item__title">
           <slot name="title" />
         </strong>
-        <!-- Meta -->
-        <div class="book-item__meta">
-          <!-- Price -->
-          <span><slot name="price" /></span>
+        <!-- Price -->
+        <div class="book-item__price"><slot name="price" /></div>
+        <!-- Selected -->
+        <div
+          class="book-item__selected"
+          :class="{ 'book-item__selected--active': isSelected }"
+        >
+          Выбрано
         </div>
         <!-- Duration -->
-        <span class="book-item__duration"><slot name="duration" /></span>
+        <span class="book-item__duration">
+          <slot name="duration" />
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const { icon } = defineProps({
+const { icon, id, selected } = defineProps({
   icon: Object,
+  id: [String, Number],
+  selected: Array,
 });
+
+const isSelected = computed(() => selected.includes(id));
+
+const emit = defineEmits(["update:select"]);
+
+const toggle = () => {
+  if (isSelected.value) {
+    const index = selected.indexOf(id);
+    if (index > -1) {
+      selected.splice(index, 1);
+    }
+  } else {
+    selected.push(id);
+  }
+
+  emit("update:selected", selected);
+};
 </script>
 
 <style lang="less">
@@ -41,7 +66,7 @@ const { icon } = defineProps({
   }
 
   &__icon {
-    --size: 62px;
+    --size: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +91,7 @@ const { icon } = defineProps({
 
   &__title {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     font-weight: 500;
     font-size: 1.1rem;
   }
@@ -77,6 +102,18 @@ const { icon } = defineProps({
     bottom: 0;
     font-weight: 300;
     font-size: 1rem;
+  }
+
+  &__selected {
+    color: darken(#07d85b, 20%);
+    opacity: 0;
+    margin-left: 8px;
+    transition: all 200ms;
+
+    &--active {
+      opacity: 1;
+      margin-left: 0;
+    }
   }
 }
 </style>

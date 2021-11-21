@@ -9,6 +9,8 @@
           alt: '✂️',
           color: '#fef6eb',
         }"
+        id="5597374"
+        v-model:selected="selected"
       >
         <template #title>Стрижка с укладкой</template>
         <template #price>850 ₽</template>
@@ -16,7 +18,13 @@
       </ContentBookItem>
 
       <ContentBookItem
-        :icon="{ src: '/images/icons/brush.png', alt: '👩‍🎨', color: '#eeecfb' }"
+        :icon="{
+          src: '/images/icons/brush.png',
+          alt: '👩‍🎨',
+          color: '#eeecfb',
+        }"
+        id="5597497"
+        v-model:selected="selected"
       >
         <template #title>Цветное окрашивание</template>
         <template #price>2 100 — 3 000 ₽<sup>1</sup></template>
@@ -34,8 +42,13 @@
 </template>
 
 <script setup>
+const selected = ref([]);
+
 const link = computed(
-  () => `https://n363845.yclients.com/company:346950?o=m1310559`
+  () =>
+    `https://n363845.yclients.com/company:346950/idx:0/date?o=m1310559s${selected.value.join(
+      ","
+    )}`
 );
 </script>
 
