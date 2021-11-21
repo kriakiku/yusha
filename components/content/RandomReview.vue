@@ -45,13 +45,10 @@
 </template>
 
 <script setup>
-const { data: reviews } = await useLazyFetch("/api/reviews", {
-  lazy: true,
-  server: false,
-});
-const review = computed(() =>
+const { data: reviews } = await useFetch("/api/reviews");
+const review = useState('randomReview', () => 
   reviews.value ? [...reviews.value].sort(() => Math.random() - 0.5)[0] : []
-);
+)
 </script>
 
 <style lang="less">

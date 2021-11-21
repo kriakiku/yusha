@@ -1,25 +1,25 @@
 <template>
   <article>
-    <h1>Скоро тут будет очень много всякого разного</h1>
+    <ContentBook />
 
-    <UiLottie
+    <!-- <UiLottie
       :content="sticker"
       :width="192"
       :height="192"
       loop
       style="margin: 30px auto 60px"
-    />
+    /> -->
 
-    <NuxtLink to="/thanks" style="text-decoration: none">
+    <!-- <NuxtLink to="/thanks" style="text-decoration: none">
       <UiButton type="black" block
         >Перейти на страницу<br />
         «Спасибо за визит!»</UiButton
       >
-    </NuxtLink>
+    </NuxtLink> -->
 
-    <br /><br />
+    <!-- <br /><br /> -->
 
-    <ContentRecomendations with-title />
+    <!-- <ContentRecomendations with-title /> -->
     <ContentRandomReview />
   </article>
 </template>

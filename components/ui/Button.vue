@@ -1,13 +1,44 @@
 <template>
-  <button class="it-btn" :class="rootClasses">
+  <button v-if="!to && !href" class="it-btn" :class="rootClasses">
     <span v-if="$slots.default" class="it-btn-text">
       <slot />
     </span>
   </button>
+  <NuxtLink v-if="to" :to="to" class="it-btn" :class="rootClasses">
+    <span v-if="$slots.default" class="it-btn-text">
+      <slot />
+    </span>
+  </NuxtLink>
+  <a v-if="href" :href="href" class="it-btn" :class="rootClasses">
+    <span v-if="$slots.default" class="it-btn-text">
+      <slot />
+    </span>
+  </a>
 </template>
 
+<script setup lang="ts">
+const Sizes = useSizes();
+const Colors = useColors();
+
+const { type, size, block, to, href } = defineProps({
+  type: { type: String },
+  size: { type: String },
+  block: { type: Boolean },
+  to: { type: String },
+  href: { type: String },
+});
+
+const rootClasses = computed(() => [
+  {
+    "it-btn--block": block,
+    [`it-btn--${size || Sizes.NORMAL}`]: true,
+    [`it-btn--${type || Colors.NEUTRAL}`]: true,
+  },
+]);
+</script>
+
 <style lang="less">
-@import '~/assets/variables.less';
+@import "~/assets/variables.less";
 
 .set-button-type (@bg-color) {
   background-color: @bg-color;
@@ -71,6 +102,7 @@
   padding: 8px 20px;
   outline: none;
   user-select: none;
+  text-decoration: none;
 
   &-text,
   > i {
@@ -162,25 +194,5 @@
   &--small {
     padding: 5px 14px;
   }
-
 }
 </style>
-
-<script setup lang="ts">
-const Sizes = useSizes();
-const Colors = useColors();
-
-const { type, size, block } = defineProps({
-  type: { type: String },
-  size: { type: String },
-  block: { type: Boolean },
-});
-
-const rootClasses = computed(() => [
-  {
-    "it-btn--block": block,
-    [`it-btn--${size || Sizes.NORMAL}`]: true,
-    [`it-btn--${type || Colors.NEUTRAL}`]: true,
-  },
-]);
-</script>
