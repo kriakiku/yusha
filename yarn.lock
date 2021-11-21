@@ -3253,9 +3253,9 @@ lilconfig@^2.0.3:
   integrity sha512-bfTIN7lEsiooCocSISTWXkiWJkRqtL9wYtYy+8EK3Y41qh3mpwPU0ycTOgjdY9ErwXCc8QyrQp82bdL0Xkm9yA==
 
 lines-and-columns@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
-  integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
+  integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
 listhen@^0.2.4, listhen@^0.2.5:
   version "0.2.5"
@@ -3786,7 +3786,7 @@ number-is-nan@^1.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt3@^3.0.0-27288761.d3fb512:
+nuxt3@latest:
   version "3.0.0-27288761.d3fb512"
   resolved "https://registry.yarnpkg.com/nuxt3/-/nuxt3-3.0.0-27288761.d3fb512.tgz#5ca14ac2cbd82a9580b64efdeced3fb9ddf621c5"
   integrity sha512-qTn2Cf8ylk+cugBf6Qlzglw5r1NdJYjDQL9buT1TKueldsYVMMmmgNXwJFotkWX0TsezuoGh5ckMfPrfW317oQ==

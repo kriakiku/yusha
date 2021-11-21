@@ -1,7 +1,7 @@
 <template>
     <article class="content-short">
         <!-- Banner -->
-        <img :src="banner.src" :alt="banner.alt" class="content-short__banner" />
+        <img :src="banner.src" :alt="banner.alt" width="192" height="192" class="content-short__banner" />
         <!-- Subtitle -->
         <p class="subtitle"><slot name="subtitle" /></p>
         <!-- Title -->

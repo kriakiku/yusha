@@ -1,9 +1,5 @@
 <template>
-  <div v-if="!isServcer">
+  <div>
     <NuxtPage/>
   </div>
 </template>
-
-<script setup>
-const isServcer = process.server
-</script>

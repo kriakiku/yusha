@@ -1,10 +1,5 @@
 <template>
     <div class="thanks">
-        <Head>
-            <Title>Спасибо за визит! 😻</Title>
-            <Meta name="robots" content="noindex" />
-        </Head>
-
         <!-- Баннер -->
         <ContentShort :banner="{ src: '/images/icons/message.png', alt: '☕️' }">
             <template #subtitle>Елена</template>
@@ -19,6 +14,20 @@
         <ContentTipInfo />
     </div>
 </template>
+
+<script setup>
+const recordId = "343710254";
+
+useMeta({
+  title: "Спасибо за визит! 😻",
+  meta: [
+    {
+      name: "robots",
+      content: "noindex",
+    },
+  ],
+});
+</script>
 
 <style lang="scss">
     .thanks {
