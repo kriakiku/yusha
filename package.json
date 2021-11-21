@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "less": "^4.1.2",
-    "nuxt3": "latest"
+    "nuxt3": "3.0.0-27288761.d3fb512"
   },
   "dependencies": {
     "html-entities": "^2.3.2",
