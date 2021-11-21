@@ -30,6 +30,20 @@
         <template #price>2 100 — 3 000 ₽<sup>1</sup></template>
         <template #duration>~4 часа</template>
       </ContentBookItem>
+
+      <ContentBookItem
+        :icon="{
+          src: '/images/icons/confetti.png',
+          alt: '🎉',
+          color: '#f9d5f9',
+        }"
+        id="7973290"
+        v-model:selected="selected"
+      >
+        <template #title>Тонирование</template>
+        <template #price>1 000 ₽<sup>2</sup></template>
+        <template #duration>~1:30 часа</template>
+      </ContentBookItem>
     </div>
 
     <UiButton type="primary" block :href="link">
@@ -38,8 +52,14 @@
     </UiButton>
 
     <div class="book__tip">
-      <sup>1</sup> — Конечная стоимость цветного окрашивания будет зависить от
-      сложности работы, а так же от длинны и густоты волос.
+      <div>
+        <sup>1</sup> — Конечная стоимость цветного окрашивания будет зависить от
+        сложности работы, а так же от длинны и густоты волос.
+      </div>
+      <div>
+        <sup>2</sup> — Тонирование это обновление оттенка/цвета ранее
+        осветленных волос.
+      </div>
     </div>
   </article>
 </template>

@@ -45,6 +45,18 @@ const toggle = () => {
       selected.splice(index, 1);
     }
   } else {
+    // Incongruous values
+    const incongrouValues = ["5597497", "7973290"];
+
+    if (incongrouValues.includes(id)) {
+      for (const id of incongrouValues) {
+        const index = selected.indexOf(id);
+        if (index > -1) {
+          selected.splice(index, 1);
+        }
+      }
+    }
+
     selected.push(id);
   }
 
