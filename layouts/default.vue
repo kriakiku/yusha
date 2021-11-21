@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="layout" ref="layout">
     <header class="layout__header">
       <UiLogo />
       <!-- Instagram -->
@@ -27,6 +27,14 @@
 <script setup>
 const { $router } = useNuxtApp();
 const routeName = computed(() => $router.currentRoute.value.name);
+const layout = ref(null);
+
+watch(routeName, () => {
+  if (!process.server && layout.value && document) {
+    layout.value.scrollTop = 0;
+    document.scrollTop = 0;
+  }
+});
 </script>
 
 <style lang="less">
@@ -46,7 +54,9 @@ const routeName = computed(() => $router.currentRoute.value.name);
 
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +78,7 @@ body {
 
     overflow-x: auto;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
     }

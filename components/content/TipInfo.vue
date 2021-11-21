@@ -33,7 +33,7 @@
   margin: 0 calc(var(--content-padding) * -1);
   padding: calc(var(--content-padding) / 2) var(--content-padding);
 
-  &__button {
+  .it-btn {
     margin: 4px 0 4px 0;
     padding: 12px 10px;
     font-size: 1.1rem;
