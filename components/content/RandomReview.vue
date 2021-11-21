@@ -116,6 +116,7 @@ const review = computed(() =>
   }
 
   &__content {
+    flex: 1;
     margin-left: 12px;
   }
 
