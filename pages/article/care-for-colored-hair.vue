@@ -5,7 +5,7 @@
         <!-- Переключатель цвета волс -->
         <div class="color-picker">
             <p>В первую очередь — выбери тип своего окрашивания, это повлияет на рекомендацию:</p>
-            <it-toggle v-model="colorType" :options="colorTypes" />
+            <UiToggle v-model="colorType" :options="colorTypes" />
         </div>
 
         <!-- Цветное окрашивание -->
@@ -33,7 +33,7 @@
             </ol>
         </div>
 
-        <it-divider />
+        <UiDivider />
 
         <p>Если у тебя остались вопросы, то ты смело можешь задать их мне в директ Instagram'a — <a href="https://www.instagram.com/yusha.otter/">@yusha.otter</a>.</p>
 
@@ -46,7 +46,7 @@
     const colorType = ref(colorTypes[0])
 </script>
 
-<style lang="scss" scoped>
+<style lang="less">
     .color-picker {
         font-size: 0.94rem;
         font-weight: 500;

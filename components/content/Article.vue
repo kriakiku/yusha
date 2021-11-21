@@ -11,7 +11,7 @@
       <slot />
     </div>
 
-    <it-divider />
+    <UiDivider />
 
     <!-- Tips -->
     <ContentTipInfo />

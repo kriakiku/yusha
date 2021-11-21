@@ -17,7 +17,7 @@
         :href="`https://n363845.yclients.com/company:346950/profile/record/${recordId}`"
         target="_blank"
       >
-        <it-button type="black" block> Управление записью </it-button>
+        <UiButton type="black" block> Управление записью </UiButton>
       </a>
       <p class="check-in__tip">
         Если ты понимаешь, что передумал(-а) или не сможешь прийти — пожалуйста
@@ -43,7 +43,7 @@ useMeta({
 });
 </script>
 
-<style lang="scss">
+<style lang="less">
 .check-in {
   display: block;
 

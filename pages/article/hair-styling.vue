@@ -3,9 +3,9 @@
         <template #title>Как укладывать волосы?</template>
 
         <!-- Переключатель вида волос -->
-        <div class="color-picker">
+        <div class="hair-picker">
             <p>В первую очередь — выбери тип своих волос, от этого будут зависеть рекомендации:</p>
-            <it-toggle v-model="hairType" :options="hairTypes" />
+            <UiToggle v-model="hairType" :options="hairTypes" />
         </div>
 
 
@@ -21,8 +21,8 @@
     const hairType = ref(hairTypes[0])
 </script>
 
-<style lang="scss" scoped>
-    .color-picker {
+<style lang="less">
+    .hair-picker {
         font-size: 0.94rem;
         font-weight: 500;
         margin: 12px 0 24px 0;

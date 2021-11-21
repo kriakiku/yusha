@@ -29,7 +29,6 @@ export const useDragScroll = (ref: Ref<HTMLDivElement>) => {
             const x = e.pageX - ref.value.offsetLeft;
             const walk = (x - startX) * 1.2; //scroll-fast
             ref.value.scrollLeft = scrollLeft - walk;
-            console.log(walk);
           });
     })
 

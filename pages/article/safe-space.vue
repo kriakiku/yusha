@@ -28,7 +28,7 @@
     </ContentArticle>
 </template>
 
-<style lang="scss" scoped>
+<style lang="less">
     .color-picker {
         font-size: 0.94rem;
         font-weight: 500;

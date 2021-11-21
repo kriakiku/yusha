@@ -29,7 +29,7 @@ useMeta({
 });
 </script>
 
-<style lang="scss">
+<style lang="less">
     .thanks {
         display: block;
     }

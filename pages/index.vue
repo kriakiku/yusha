@@ -11,15 +11,15 @@
     />
 
     <NuxtLink to="/thanks" style="text-decoration: none">
-      <it-button type="black" block
+      <UiButton type="black" block
         >Перейти на страницу<br />
-        «Спасибо за визит!»</it-button
+        «Спасибо за визит!»</UiButton
       >
     </NuxtLink>
 
     <br /><br />
 
-    <ContentRecomendations title />
+    <ContentRecomendations with-title />
     <ContentRandomReview />
   </article>
 </template>
