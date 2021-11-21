@@ -1,6 +1,12 @@
 <template>
   <footer class="tip-info">
-    <UiButton type="primary" block class="tip-info__button">
+    <UiButton
+      type="primary"
+      block
+      class="tip-info__button"
+      href="https://pay.cloudtips.ru/p/165f6153"
+      target="_blank"
+    >
       Оставить чаевые
     </UiButton>
 

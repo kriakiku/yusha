@@ -16,7 +16,7 @@
           class="book-item__selected"
           :class="{ 'book-item__selected--active': isSelected }"
         >
-          Выбрано
+          ✅ Выбрано
         </div>
         <!-- Duration -->
         <span class="book-item__duration">
@@ -66,7 +66,7 @@ const toggle = () => {
   }
 
   &__icon {
-    --size: 65px;
+    --size: 69px;
     display: flex;
     align-items: center;
     justify-content: center;

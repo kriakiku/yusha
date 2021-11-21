@@ -32,7 +32,10 @@
       </ContentBookItem>
     </div>
 
-    <UiButton type="primary" block :href="link"> Продолжить </UiButton>
+    <UiButton type="primary" block :href="link">
+      Продолжить
+      <span class="book__button-info"> — выбрано {{ selected.length }}</span>
+    </UiButton>
 
     <div class="book__tip">
       <sup>1</sup> — Конечная стоимость цветного окрашивания будет зависить от
@@ -66,6 +69,14 @@ const link = computed(
     font-size: 0.84rem;
     line-height: 1;
     margin-top: 8px;
+  }
+
+  &__button-info {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-left: 6px;
+    opacity: 0.8;
+    margin-top: 1px;
   }
 }
 </style>
