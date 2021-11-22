@@ -53,7 +53,6 @@ const title = computed(() => {
 
   &__content {
     padding: 8px 14px;
-    min-height: 150px;
   }
 
   &__title {

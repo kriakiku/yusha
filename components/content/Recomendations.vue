@@ -86,6 +86,7 @@ useDragScroll(content);
   }
 
   &__list {
+    display: flex;
     width: calc(264px * 3);
   }
 }
