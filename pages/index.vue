@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import sticker from "~/assets/stickers/otter-love.json";
+// import sticker from "~/assets/stickers/otter-love.json";
 
 useMeta({
   title: "Yusha Otter — Твой стилист 😼",
