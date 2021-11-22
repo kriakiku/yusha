@@ -1,6 +1,6 @@
 <template>
   <div class="book-item">
-    <div class="book-item__inner" @click="toggle">
+    <div class="book-item__inner" @click="toggle" role="button" :id="`book--${id}`">
       <div class="book-item__icon" :style="{ '--color': icon.color }">
         <img :src="icon.src" :alt="icon.alt" width="44" height="44" />
       </div>
