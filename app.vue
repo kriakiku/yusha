@@ -40,6 +40,10 @@ if (!process.server) {
       accurateTrackBounce: true,
       webvisor: true,
     });
+
+    window.reachGoal = (targetName) => {
+      ym(86583955, "reachGoal", targetName);
+    };
   })();
 }
 </script>

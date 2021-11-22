@@ -46,7 +46,7 @@
       </ContentBookItem>
     </div>
 
-    <UiButton type="primary" block :href="link" id="book--submit">
+    <UiButton type="primary" block :href="link" @click="analytics">
       Продолжить
       <span class="book__button-info"> — выбрано {{ selected.length }}</span>
     </UiButton>
@@ -73,6 +73,20 @@ const link = computed(
       ","
     )}`
 );
+
+const analytics = () => {
+  for (const id of selected.value) {
+    window?.reachGoal?.(`book:${id}`);
+  }
+
+  if (selected.value.length === 0) {
+    window?.reachGoal?.("book:empty");
+  }
+
+  window?.reachGoal?.("book:submit");
+};
+
+expose(analytics);
 </script>
 
 <style lang="less">
