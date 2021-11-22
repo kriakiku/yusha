@@ -1,6 +1,12 @@
 <template>
   <NuxtLink :to="to" class="recomendations-item">
-    <img :src="banner" :alt="title" class="recomendations-item__banner" />
+    <img
+      :src="banner"
+      :alt="title"
+      class="recomendations-item__banner"
+      width="250"
+      height="140"
+    />
     <div class="recomendations-item__content">
       <h3 class="recomendations-item__title"><slot name="title" /></h3>
       <div class="recomendations-item__description">
@@ -47,6 +53,7 @@ const title = computed(() => {
 
   &__content {
     padding: 8px 14px;
+    min-height: 150px;
   }
 
   &__title {
