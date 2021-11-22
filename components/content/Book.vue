@@ -46,7 +46,7 @@
       </ContentBookItem>
     </div>
 
-    <UiButton type="primary" block :href="link">
+    <UiButton type="primary" block :href="link" id="book--submit">
       Продолжить
       <span class="book__button-info"> — выбрано {{ selected.length }}</span>
     </UiButton>
