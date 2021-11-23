@@ -1,5 +1,5 @@
 <template>
-  <footer class="tip-info">
+  <footer class="tip-info" :class="`tip-info--${position}`">
     <UiButton
       type="primary"
       block
@@ -22,16 +22,33 @@
   </footer>
 </template>
 
+<script setup>
+const { position } = defineProps({
+  position: { 
+    type: String,
+    default: 'sticky'
+  },
+});
+</script>
+
 <style lang="less">
 .tip-info {
-  position: sticky;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
-  background-color: var(--surface-color--opacity);
-  backdrop-filter: saturate(180%) blur(20px);
   margin: 0 calc(var(--content-padding) * -1);
   padding: calc(var(--content-padding) / 2) var(--content-padding);
+
+  &--sticky {
+    position: sticky;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: var(--surface-color--opacity);
+  }
+
+  &--static {
+    position: relative;
+    background-color: var(--surface-color);
+  }
 
   .it-btn {
     margin: 4px 0 4px 0;

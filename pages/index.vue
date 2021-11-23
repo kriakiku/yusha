@@ -3,6 +3,7 @@
     <ContentBook />
     <ContentRecomendations with-title />
     <ContentRandomReview />
+    <ContentTipInfo position="static" />
   </article>
 </template>
 
