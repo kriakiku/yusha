@@ -85,8 +85,6 @@ const analytics = () => {
 
   window?.reachGoal?.("book:submit");
 };
-
-expose(analytics);
 </script>
 
 <style lang="less">
