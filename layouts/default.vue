@@ -5,8 +5,8 @@
       <!-- Instagram -->
       <a
         class="layout__social"
-        href="https://www.instagram.com/yusha.otter"
-        target="__blank"
+        href="https://www.instagram.com/yusha.otter/"
+        target="_blank"
       >
         <img
           src="/images/icons/instagram.png"
